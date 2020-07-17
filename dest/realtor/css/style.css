@@ -553,27 +553,44 @@ main {
     margin-bottom: 40px;
     display: block;
     width: 100%;
-    font-size: 24px;
-    font-weight: 700;
     text-align: center;
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: #3A546A;
 }
 .getpaid__item {
+    display: flex;
+    width: 100%;
+    max-width: 374px;
     font-size: 18px;
     font-weight: 500;
 }
-.getpaid__btn button {
-    width: 108px;
-    height: 38px;
-    background-color: #E6EBF1;
-    border: none;
-    border-radius: 5px;
-    text-transform: capitalize;
-    color: #3A546A;
-    font-weight: 300;
-    box-shadow: 0px 2px 3px #00000029;
+.getpaid__btn {
+    width: 100%;
+    max-width: 374px;
 }
 .getpaid__btn button:hover {
     box-shadow: 0px 1px 2px #00000029;
+}
+.getpaid__btn button {
+    white-space: nowrap;
+    width: 100%;
+    max-width: 374px;
+    height: 27px;
+    padding-left: 30px;
+    padding-right: 30px;
+    /*background-color: #E6EBF1;*/
+    border: none;
+    border-radius: 5px;
+    font: Bold 14px/16px SF Pro Display;
+    letter-spacing: 0px;
+    color: #FFFEEE;
+    opacity: 1;
+    text-transform: uppercase;
+    background: #AFCED0 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 3px #00000029;
 }
 @media only screen and (max-width: 1024px) {
     .payment {
@@ -817,7 +834,7 @@ main {
 .authorization__info {
     border-radius: 7px;
     width: 100%;
-    background-color: #fffeee;
+    background-color: #fff;
     color: #3A546A;
     height: 76px;
     padding-left: 14px;
@@ -910,6 +927,18 @@ main {
     min-height: 38px;
     margin-bottom: 15px;
 }
+.review__top_item.review__top_item--action span {
+    display: flex;
+    align-items: center;
+}
+.review__top_item.review__top_item--action span a {
+    margin-left: 5px;
+    text-decoration: underline;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+    color: #AFCED0;
+}
 .review__top_item span {
     display: block;
 }
@@ -937,8 +966,11 @@ main {
     grid-template-columns: 2fr 10fr;
 }
 .review__bottom_item span {
-    display: grid;
+    /*display: grid;*/
     align-items: center;
+}
+.review__bottom_item span u {
+    display: inline-block;
 }
 .review__bottom_item span:last-child {
     grid-template-columns: max-content auto;
@@ -1154,4 +1186,125 @@ main {
     .detailstep__from_submit {
         margin-bottom: 20px;
     }
+}
+
+.funds {
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+.funds__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 78px;
+}
+
+.funds__header span {
+    padding-bottom: 10px;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+    color: #FFFEEE;
+}
+
+.funds__header h1 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38px;
+    color: #FFFEEE;
+}
+
+.funds__header p {
+    width: 100%;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFEEE;
+}
+
+.funds__form {
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.funds__form-field {
+    padding-bottom: 15px;
+}
+
+.funds__form-field--option {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.funds__form-field--option > div {
+    width: 50%;
+}
+
+.funds__form-field--option > div:nth-of-type(1) {
+    padding-right: 10px;
+}
+.funds__form-field--option > div:nth-of-type(2) {
+    padding-left: 10px;
+}
+
+.funds__form-field--option label {
+    display: flex;
+    align-items: center;
+}
+
+.funds__form-field--option label input {
+    margin-right: 5px;
+}
+
+.funds__form-field--option label u {
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFEEE;
+}
+
+.funds__form-field--option label u i {
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FD050E;
+    text-align: right;
+    font-style: normal;
+}
+
+.funds__form-field button {
+    outline: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 27px;
+    border: none;
+    background: #AFCED0 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFEEE;
+}
+
+.funds__form-field.funds__form-field--info {
+    padding-bottom: 0;
+}
+
+.funds__form-field p {
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFEEE;
 }
