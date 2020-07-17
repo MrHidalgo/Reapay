@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@stripe">
+    <meta name="twitter:title" content="reapay.io">
+    <meta name="twitter:description" content="reapay.io is an on-demand platform built on top of Stripe Connect Custom.">
+    <meta name="twitter:image" content="">
+    <title>Review and send</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" sizes="64x64" href="/img/favicon.svg">
+</head>
+<body>
+    <header>
+        <article class="toolbar">
+                <img class="toolbar__img" src="img/image2vector.svg" alt="reapay.io">
+                <div class="toolbar__btn">
+                    <span>dashboard</span>
+                    <button>log out</button>
+                </div>
+        </article>
+    </header>
+    <main>
+        <div class="step">step 2/2</div>
+        <article class="review__wrapper">
+            <h1>Broker Funds Disbursement</h1>
+            <p>
+                MLG Title is scheduled to disburse the following amounts to Bridge Realty, LLC. Selections can be changed at anytime prior to close of escrow. How would you like to receive these funds?
+            </p>
+            <form class="form review" action="#">
+                <section class="review__item">
+                    <div>
+                        <label for="bridgeCommision">Bridge Commission</label>
+                        <input type="text" name="bridgeCommision" id="bridgeCommision" value="$881.55">
+                    </div>
+                    <div>
+                        <input type="checkbox" name="bridgeCommision" id="bridgeCommisionMail"
+                        onchange=" 
+                            if ( document.querySelector('#bridgeCommisionMail:checked') && 
+                                document.querySelector('#bridgeAdminFeeMail:checked')) {
+                                document.querySelector('#address__block').style.display = 'grid';
+                                document.querySelector('#review__submit').style.display = 'flex';
+                                document.querySelector('#convenienceFee__block').style.display = 'none';
+                                document.querySelector('#bridgeCommisionSelect').style.display = 'none';
+                            } else {
+                                document.querySelector('#address__block').style.display = 'none';
+                                document.querySelector('#review__submit').style.display = 'none';
+                            }
+                            if (document.querySelector('#bridgeCommisionMail:checked')) {
+                                document.querySelector('#bridgeCommisionSelect').style.display = 'none';
+                                document.querySelector('#bridgeCommisionTransfer').checked = false;
+                                document.querySelector('#convenienceFee__block').style.display = 'none';
+                            }
+                        ">
+                        <label for="bridgeCommisionMail">Mail a check.</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="bridgeCommision" id="bridgeCommisionTransfer"
+                        onchange="
+                            if(document.querySelector('#bridgeCommisionTransfer:checked')) {
+                                document.querySelector('#bridgeCommisionSelect').style.display = 'inline-block';
+                                document.querySelector('#address__block').style.display = 'none';
+                                document.querySelector('#bridgeCommisionMail').checked = false;
+
+                            } else {
+                                document.querySelector('#convenienceFee__block').style.display = 'none';
+                                document.querySelector('#bridgeCommisionSelect').style.display = 'none';
+                            }
+                            if (document.querySelector('#bridgeCommisionTransfer:checked') &&
+                                document.querySelector('#bridgeAdminFeeTransfer:checked')) {
+                                document.querySelector('#convenienceFee__block').style.display = 'grid';
+                                document.querySelector('#review__submit').style.display = 'flex';
+                            } else {
+                                document.querySelector('#convenienceFee__block').style.display = 'none';
+                                document.querySelector('#review__submit').style.display = 'none';
+                            }
+                        ">
+                        <label for="bridgeCommisionTransfer">Electronic transfer to:</label>
+                    </div>
+                    <select class="review__select" name="bridgeCommisionSelect" id="bridgeCommisionSelect">
+                        <option value="WFx2309">WF x2309</option>
+                    </select>
+                </section>
+                <section class="review__item">
+                    <div>
+                        <label for="bridgeAdminFee">Bridge Admin Fee</label>
+                        <input type="text" name="bridgeAdminFee" id="bridgeAdminFee" value="$495">
+                    </div>
+                    <div>
+                        <input type="checkbox" name="bridgeAdminFee" id="bridgeAdminFeeMail"
+                        onchange=" 
+                            if ( document.querySelector('#bridgeCommisionMail:checked') && 
+                                 document.querySelector('#bridgeAdminFeeMail:checked')) {
+                                document.querySelector('#address__block').style.display = 'grid';
+                                document.querySelector('#review__submit').style.display = 'flex';
+                                document.querySelector('#convenienceFee__block').style.display = 'none';
+                                document.querySelector('#bridgeAdminFeeTransferSelect').style.display = 'none';
+                            } else {
+                                document.querySelector('#address__block').style.display = 'none';
+                                document.querySelector('#review__submit').style.display = 'none';
+                            }
+                            if (document.querySelector('#bridgeAdminFeeMail:checked')) {
+                                document.querySelector('#bridgeAdminFeeTransferSelect').style.display = 'none';
+                                document.querySelector('#bridgeAdminFeeTransfer').checked = false;
+                                document.querySelector('#convenienceFee__block').style.display = 'none';
+                            }
+                        ">
+                        <label for="bridgeAdminFeeMail">Mail a check.</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="bridgeAdminFee" id="bridgeAdminFeeTransfer"
+                        onchange="
+                            if(document.querySelector('#bridgeAdminFeeTransfer:checked')) {
+                                document.querySelector('#bridgeAdminFeeTransferSelect').style.display = 'block';
+                                document.querySelector('#address__block').style.display = 'none';
+                                document.querySelector('#bridgeAdminFeeMail').checked = false;
+                            } else {
+                                document.querySelector('#convenienceFee__block').style.display = 'none';
+                                document.querySelector('#bridgeAdminFeeTransferSelect').style.display = 'none'
+                            }
+                            if (document.querySelector('#bridgeCommisionTransfer:checked') &&
+                                document.querySelector('#bridgeAdminFeeTransfer:checked')) {
+                                document.querySelector('#convenienceFee__block').style.display = 'grid';
+                                document.querySelector('#review__submit').style.display = 'flex';
+                            } else {
+                                document.querySelector('#bridgeAdminFeeTransferSelect').style.display = 'none'
+                                document.querySelector('#review__submit').style.display = 'none';
+                            }
+                        ">
+                        <label for="bridgeAdminFeeTransfer">Electronic transfer to:</label>
+                    </div>
+                    <select  class="review__select" name="bridgeAdminFeeTransferSelect" id="bridgeAdminFeeTransferSelect">
+                        <option value="WFx2309">WF x2309</option>
+                    </select>
+                </section>
+                <section class="review__item" id="address__block">
+                    <span>Please continue or edit your mailing address:</span>
+                    <div>
+                        <input type="text" name="address" id="address" value="1101 E 78th Street, Suite 300, Bloomington, MN 55420">
+                    </div>
+                </section>
+                <section class="review__item" id="convenienceFee__block">
+                    <span>We will debit $1 for each transfer; please select the account you’d like us to debit.</span>
+                    <div>
+                        <label for="convenienceFee">Convenience Fee</label>
+                        <input type="text" name="convenienceFee" id="convenienceFee" value="$2">
+                    </div>
+                    <select name="bridgeCommisionSelect" id="bridgeCommisionSelect">
+                        <option value="WFx2309">WF x2309</option>
+                    </select>
+                </section>
+                    <input type="submit" id="review__submit" value="save & continue">
+            </form>
+        </article>
+    </main>
+</body>
+</html>

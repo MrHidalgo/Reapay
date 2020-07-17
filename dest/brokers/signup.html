@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@stripe">
+    <meta name="twitter:title" content="reapay.io">
+    <meta name="twitter:description" content="reapay.io is an on-demand platform built on top of Stripe Connect Custom.">
+    <meta name="twitter:image" content="">
+    <title>log in</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" sizes="64x64" href="/img/favicon.svg">
+</head>
+<body>
+    <header>
+        <article class="toolbar">
+                <img class="toolbar__img" src="img/image2vector.svg" alt="reapay.io">
+                <div class="toolbar__btn">
+                    <button>LOG IN</button>
+                </div>
+        </article>
+    </header>
+    <main>
+        <form class="form pilot" action="#">
+            <h1>Complate your profile</h1>
+            <div class="pilot__options">
+                <h4 class="pilot__header">Account type</h4>
+                <label class="pilot__option" for="po-company">
+                    <input type="radio" name="pilot-type" value="individual" id="po-company" checked="checked"/>
+                    <span>Closer / Title Company</span>
+                </label>
+                <label class="pilot__option" for="po-individual">
+                    <input type="radio" name="pilot-type" value="individual" id="po-individual"/>
+                    <span>Broker</span>
+                </label>
+                <label class="pilot__option" for="po-realtor">
+                    <input type="radio" name="pilot-type" value="individual" id="po-realtor" />
+                    <span>Realtor</span>
+                </label>
+            </div>
+            <h4 class="pilot__header" id="account-info">Company information</h4>
+            <div>
+                <div class="row pilot__info individual">
+                    <label for="brokerName">Broker Name</label>
+                    <input type="text" name="brokerName" id="brokerName" placeholder="Jane Smith" />
+                </div>
+                <div class="row pilot__info individual">
+                    <label for="companyName">Company Name</label>
+                    <input type="text" name="companyName" id="companyName" placeholder="Example Title" />
+                </div>
+                <div class="row pilot__info individual">
+                    <label for="brokerEmail">Broker Email</label>
+                    <input type="text" name="brokerEmail" id="brokerEmail" placeholder="jane@exampletitle.com" />
+                </div>
+                <div class="row pilot__info individual">
+                    <label for="brokerPhone">Broker Phone</label>
+                    <input type="text" name="brokerPhone" id="brokerPhone" placeholder="(952) 255-1111" />
+                </div>
+            </div>
+            <input class="pilot__submit" type="submit" value="Continue" />
+        </form>
+    </main>
+</body>
+</html>

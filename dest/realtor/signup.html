@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@stripe">
+    <meta name="twitter:title" content="reapay.io">
+    <meta name="twitter:description" content="reapay.io is an on-demand platform built on top of Stripe Connect Custom.">
+    <meta name="twitter:image" content="">
+    <title>log in</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" sizes="64x64" href="/img/favicon.svg">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+</head>
+<body>
+    <header>
+        <article class="toolbar">
+                <img class="toolbar__img" src="img/image2vector.svg" alt="reapay.io">
+                <div class="toolbar__btn">
+                    <button>LOG IN</button>
+                </div>
+        </article>
+    </header>
+    <main>
+        <form class="form pilot" action="#">
+            <h1>Complete your Realtor profile</h1>
+            <div class="pilot__wrapper">
+
+                <!--<div class="pilot__options">
+                    <h4 class="pilot__header">Account type</h4>
+                    <label class="pilot__option" for="po-company">
+                        <input type="radio" name="pilot-type" value="individual" id="po-company" checked="checked"/>
+                        <span>Closer/ Title Company</span>
+                    </label>
+                    <label class="pilot__option" for="po-individual">
+                        <input type="radio" name="pilot-type" value="individual" id="po-individual"/>
+                        <span>Broker</span>
+                    </label>
+                    <label class="pilot__option" for="po-realtor">
+                        <input type="radio" name="pilot-type" value="individual" id="po-realtor" />
+                        <span>Realtor</span>
+                    </label>
+                </div>-->
+<!--                <h4 class="pilot__header" id="account-info">Company information</h4>-->
+                <div>
+                    <div class="row pilot__info individual">
+                        <label for="closerName">Realtor Name</label>
+                        <input type="text" name="closerName" id="closerName" placeholder="Jane Smith" />
+                    </div>
+                    <div class="row pilot__info individual">
+                        <label for="companyName">NMLS #</label>
+                        <input type="text" name="companyName" id="companyName" placeholder="Example Title" />
+                    </div>
+                    <div class="row pilot__info individual">
+                        <label for="closerEmail">Broker</label>
+
+<!--                        <input type="text" name="closerEmail" id="closerEmail" placeholder="jane@exampletitle.com" />-->
+                        <select class="js-example-basic-single" id="closerEmail" name="state"></select>
+                    </div>
+                    <div class="row pilot__info individual">
+                        <label for="closerPhone">Realtor Cell</label>
+                        <input type="text" name="closerPhone" id="closerPhone" placeholder="(952) 255-1111" />
+                    </div>
+                </div>
+                <input class="pilot__submit" type="submit" value="Continue" />
+
+            </div>
+        </form>
+    </main>
+</body>
+<script>
+    $(document).ready(function() {
+        const arrSelectData = [
+            {id:'', text:'Coldwell Banker Real Estate'},
+            {id:'', text:'SHANNON DAVID REALTY, LLC'},
+            {id:'', text:'Homes USA Realty, Inc.'},
+            {id:'', text:'Biagini Properties'},
+            {id:'', text:'Two Rivers Community Land Trus'},
+            {id:'', text:'Exult Realty, Inc.'},
+            {id:'', text:'United Realty'},
+            {id:'', text:'DirectByOwner.com'},
+            {id:'', text:'Daniel Goff Realty'},
+            {id:'', text:'Independent Realty, INC'},
+            {id:'', text:'Keller Williams Integrity RE'},
+            {id:'', text:'Common Sense Realty'},
+            {id:'', text:'Triggs Realty'},
+            {id:'', text:'United Real Estate Associates'},
+            {id:'', text:'Ballantine Realty'},
+            {id:'', text:'ADM Properties, Inc.'},
+            {id:'', text:'William Gores Realty'},
+            {id:'', text:'Wildwood Realty'},
+            {id:'', text:'Carleton B. Crutchfield'},
+            {id:'', text:'Referral Resource Center Inc.'},
+            {id:'', text:'Partners Enterprise Realty, LL'},
+            {id:'', text:'Werschay Real Estate Services'},
+            {id:'', text:'First Choice Lenders & Realtor'},
+            {id:'', text:'Re/Max Prodigy'},
+            {id:'', text:'Affinity Realty, Inc.'},
+            {id:'', text:'ELT Realty'},
+            {id:'', text:'Raintree Realty LLC'},
+            {id:'', text:'Havens to Betsy Realty'},
+            {id:'', text:'Kuula Real Estate'},
+            {id:'', text:'Triple Crown Realty'},
+            {id:'', text:'Wren Realty Inc.'},
+            {id:'', text:'Skyline Investments'},
+            {id:'', text:'Wang-Yu Realty, LLC'},
+            {id:'', text:'RPR Value Realty'},
+            {id:'', text:'Sam Danna'},
+            {id:'', text:'Fox Real Estate Group'},
+            {id:'', text:'Starz Group of Realtors'},
+            {id:'', text:'Realty Executives Associates'},
+            {id:'', text:'MW Brown & Associates, LLC'},
+            {id:'', text:'Aaron Barbeau Realty'},
+            {id:'', text:'Smart Realty'},
+            {id:'', text:'The Ewing Group, LLC'},
+            {id:'', text:'Choua Yang Realty'},
+            {id:'', text:'M/S Longworth, LLC'},
+            {id:'', text:'Cool Dwellings, LLC'},
+            {id:'', text:'Sylvan Realty Inc.'},
+            {id:'', text:'Richard Timothy Koons Appraisa'},
+            {id:'', text:'Weichert, Realtors - Jewson Pr'},
+            {id:'', text:'Grand Realty, LLC'},
+            {id:'', text:'Wild River Realty LLC'},
+            {id:'', text:'Valley Realty'},
+            {id:'', text:'AB III, LLC'},
+            {id:'', text:'Exit Realty Nexus'},
+            {id:'', text:'Lux High Pointe Realty'},
+            {id:'', text:'RE/MAX Professionals'},
+            {id:'', text:'Minnesota Real Estate Group'},
+            {id:'', text:'Woodland Development Co.'},
+            {id:'', text:'Chisago County Assessor'},
+            {id:'', text:'NHS Real Estate Group'},
+            {id:'', text:'Eos Realty, LLC'},
+            {id:'', text:'RLH Real Estate'},
+            {id:'', text:'Biddle Realty Inc.'},
+            {id:'', text:'Acorn Realty'},
+            {id:'', text:'Keller Williams Premier Realty'},
+            {id:'', text:'Twin Cities Real Estate'},
+            {id:'', text:'Marshall & Koopman REAL ESTATE'},
+            {id:'', text:'Pyramid Real Estate Co., Inc.'},
+            {id:'', text:'A & I Home Services, LLC'},
+            {id:'', text:'TLC Realty, LLC'},
+            {id:'', text:'Derrick Custom Homes Rlty, LLC'},
+            {id:'', text:'ProTeck Valuation Services'},
+            {id:'', text:'Bruce Sventek Realty'},
+            {id:'', text:'Michael Lee, Inc.'},
+            {id:'', text:'Currell Realty'},
+            {id:'', text:'Greater Midwest Realty'},
+            {id:'', text:'Paxmar, LLC'},
+            {id:'', text:'Valley Real Estate Services'},
+            {id:'', text:'Time Value Realty LLC'},
+            {id:'', text:'Next Level Realty LLC'},
+            {id:'', text:'Advanced Real Estate Services'},
+            {id:'', text:'Rice Realty LLC'},
+            {id:'', text:'Keller Williams Premier Realty'},
+            {id:'', text:'Hampton Companies'},
+            {id:'', text:'Cenex Realty, Inc.'},
+            {id:'', text:'Wissota Realty LLC'},
+            {id:'', text:'No Place Like Home'},
+            {id:'', text:'Fletcher Realty'},
+            {id:'', text:'BLP Advantage Industries'},
+            {id:'', text:'Rivertown Realty'},
+            {id:'', text:'Earthstone Realty'},
+            {id:'', text:'East Central Equities, LLC'},
+            {id:'', text:'Mendota Realty LLC'},
+            {id:'', text:'Allchoice Properties & Fi, LLC'},
+            {id:'', text:'Elliott Real Estate, LLC'},
+            {id:'', text:'Rush Point Realty, LLC'},
+            {id:'', text:'Primestar Realty'},
+            {id:'', text:'Chisago Lakes Realty, Inc'},
+            {id:'', text:'Floyd R. Beecham, Sr.'},
+            {id:'', text:'ZMAK Realty, LLC'},
+            {id:'', text:'Timber Ghost Realty, LLC'},
+            {id:'', text:'Meadow Rock Real Estate LLC'},
+            {id:'', text:'IQ Realty'},
+            {id:'', text:'Finch Real Estate'},
+            {id:'', text:'Fischer Realty Investments, LL'},
+            {id:'', text:'M2 Real Estate Group Inc.'},
+            {id:'', text:'Key Realty, LLC'},
+            {id:'', text:'Home Front Realty LLC'},
+            {id:'', text:'Dailey Realty'},
+            {id:'', text:'Empire Realty LLC'},
+            {id:'', text:'Riverdale Realty, Ltd.'},
+            {id:'', text:'Lifecycle Real Estate Services'},
+            {id:'', text:'Land Capital Group'},
+            {id:'', text:'Statewide Realty Inc.'},
+            {id:'', text:'City Life Realty, LLC'},
+            {id:'', text:'Twin City Quality Realty LLC'},
+            {id:'', text:'ELMA Realty, LLC'},
+            {id:'', text:'Citi Realty'},
+            {id:'', text:'Berkshire Hathaway Home Services Sundial Realty'},
+            {id:'', text:'PICKERING REALTY'},
+            {id:'', text:'John M. Davis'},
+            {id:'', text:'Right Properties, Inc.'},
+            {id:'', text:'New City Real Estate, Incorpor'},
+            {id:'', text:'Twin City Metro Realty'},
+            {id:'', text:'Complete Realty, LLC'},
+            {id:'', text:'Pine Grove Realty'},
+            {id:'', text:'Referral Realty'},
+            {id:'', text:'Donald Duncan'},
+            {id:'', text:'Continental/Troy Develp Corp'},
+            {id:'', text:'BLIS Realty'},
+            {id:'', text:'Saint Paul Realty'},
+            {id:'', text:'Goff Realty Group'},
+            {id:'', text:'National Realty Guild'},
+            {id:'', text:'Home Value Realty'},
+            {id:'', text:'Custom 1 Realty'},
+            {id:'', text:'Welcome Home Real Estate'},
+            {id:'', text:'The Property Shop'},
+            {id:'', text:'Archer Realty Inc.'},
+            {id:'', text:'Forsalebyweb.com'},
+            {id:'', text:'Norton Realty, Inc'},
+            {id:'', text:'Metro Home Realty'},
+            {id:'', text:'GPS Realty'},
+            {id:'', text:'Alternative Realty Concepts'},
+            {id:'', text:'Amaris Company, LLC'},
+            {id:'', text:'Brokers Realty, Inc.'},
+            {id:'', text:'Kingwood Management'},
+            {id:'', text:'Integrity Realty'},
+            {id:'', text:'High Pointe Realty, Inc.'},
+            {id:'', text:'Garnet Real Estate Services'},
+            {id:'', text:'A 2 Z Realty, Inc'},
+            {id:'', text:'Exit Lakes Realty'},
+            {id:'', text:'Real FIC Realty'},
+            {id:'', text:'Senior Relocation Advisors LLC'},
+            {id:'', text:'Larkin Realty Inc.'},
+            {id:'', text:'Talbot Realty'},
+            {id:'', text:'33rd Company MN LLC'},
+            {id:'', text:'Interactive Realty'},
+            {id:'', text:'Weichert, Realtors-Advantage'},
+            {id:'', text:'DBR Realty, LLC'},
+            {id:'', text:'Transition Properties'},
+            {id:'', text:'John Benjamin Easton RE'},
+            {id:'', text:'RealEstateOpens.com LLC'},
+            {id:'', text:'Light House Realty, LLC'},
+            {id:'', text:'RE/MAX Synergy'},
+            {id:'', text:'Saint Paul Home Realty'},
+            {id:'', text:'Superior Home Options Realty'},
+            {id:'', text:'4 Path Realty'},
+            {id:'', text:'Executive Associates Realty'},
+            {id:'', text:'Harmony Homes Realty'},
+            {id:'', text:'Real Estate Parkway'},
+            {id:'', text:'Accupraisal, LLC'},
+            {id:'', text:'Equity Direct Realty'},
+            {id:'', text:'Town Choice Realty'},
+            {id:'', text:'Gaughan Companies'},
+            {id:'', text:'Home Realty of Minnesota, Inc.'},
+            {id:'', text:'Incentive Realty'},
+            {id:'', text:'Land Of Lakes Realty'},
+            {id:'', text:'Sibbet Realty LLC'},
+            {id:'', text:'Huppert Homes USA'},
+            {id:'', text:'Valley Visions Realty'},
+            {id:'', text:'Select Assoc. Realty'},
+            {id:'', text:'Harper Realty Group'},
+            {id:'', text:'Tangletown Realty'},
+            {id:'', text:'Lauber Realty'},
+            {id:'', text:'Minnesota Brokerage Group'},
+            {id:'', text:'Right Choice Real Estate Servi'},
+            {id:'', text:'RE/MAX Specialists'},
+            {id:'', text:'Merck Real Estate Company, LLC'},
+            {id:'', text:'eGreen Realty & Property Mgmt'},
+            {id:'', text:'Forga Properties'},
+            {id:'', text:'Solutions Real Esate Group'},
+            {id:'', text:'Pro Team Realty LLC'},
+            {id:'', text:'Hansen & Co.'},
+            {id:'', text:'Midwest Realty Group, LLC'},
+            {id:'', text:'Coleshire Properties'},
+            {id:'', text:'Legacy Real Estate Services'},
+            {id:'', text:'Pathway Solutions, Inc.'},
+            {id:'', text:'Capitol Brokerage Inc'},
+            {id:'', text:'Anderson Johnson Real Estate'},
+            {id:'', text:'Counselor Realty, Inc'},
+        ];
+
+        $('.js-example-basic-single').select2({
+            data: arrSelectData
+        });
+    });
+</script>
+</html>

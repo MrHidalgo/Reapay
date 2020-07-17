@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@stripe">
+    <meta name="twitter:title" content="reapay.io">
+    <meta name="twitter:description" content="reapay.io is an on-demand platform built on top of Stripe Connect Custom.">
+    <meta name="twitter:image" content="">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" sizes="64x64" href="/img/favicon.svg">
+</head>
+<body>
+    <header>
+        <article class="toolbar">
+                <img class="toolbar__img" src="img/image2vector.svg" alt="reapay.io">
+                <div class="toolbar__btn">
+                    <span>dashboard</span>
+                    <button>log out</button>
+                </div>
+        </article>
+    </header>
+    <main>
+            <div class="step">step 2/3</div>
+        <article class="detailstep__wrapper">
+            <section class="detailstep">
+                <h1>Broker and Closer Details</h1>
+                <form class="detailstep__from" action="#">
+                    <div class="detailstep__from_item">
+                        <div class="detailstep__item pilot__options">
+                            <label class="pilot__option" for="choose__closer1">
+                                <input type="radio" name="choose__closer1" id="choose__closer1" value="0" checked>
+                                <span>
+                                    CHOOSE YOUR CLOSER
+                                    <sup>
+                                        <img src="img/info.svg" alt="info">
+                                    </sup>
+                                    <div>
+                                        If you’re closing is in the next 3-5 business days please choose an authorized Closer from the existing list to avoid any delays in getting you paid.
+                                    </div>
+                                </span>
+                                <select class="detailstep__select" name="detailstep__select1" id="detailstep__select1">
+                                    <option value="value1">Jane Smith - XYZ Title</option>
+                                    <option value="value2">Jane1 Smith - XYZ Title</option>
+                                    <option value="value3">Jane2 Smith - XYZ Title</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="detailstep__item detailstep__item_second pilot__options">
+                            <label class="pilot__option" for="choose__closer2">
+                                <input type="radio" name="choose__closer1" id="choose__closer2">
+                                <span>
+                                    OR, ADD YOUR OWN
+                                    <sup>
+                                        <img src="img/info.svg" alt="info">
+                                    </sup>
+                                    <div>
+                                        In some cases we require documents that may take several days to review before your Closer is authorized to disburse funds. If you’re closing is in the next 3-5 business days please choose an authorized Closer from the existing list to avoid any delays in getting you paid.
+                                    </div>
+                                </span>
+                                <div class="detailstep__show">
+                                    <div class="row pilot__info individual">
+                                        <label for="closerName">Closer Name</label>
+                                        <input type="text" name="closerName" id="closerName" placeholder="Jane Smith" />
+                                    </div>
+                                    <div class="row pilot__info individual">
+                                        <label for="companyName">Company Name</label>
+                                        <input type="text" name="companyName" id="companyName" placeholder="Example Title" />
+                                    </div>
+                                    <div class="row pilot__info individual">
+                                        <label for="closerEmail">Closer Email</label>
+                                        <input type="text" name="closerEmail" id="closerEmail" placeholder="jane@exampletitle.com" />
+                                    </div>
+                                    <div class="row pilot__info individual">
+                                        <label for="closerPhone">Closer Phone</label>
+                                        <input type="text" name="closerPhone" id="closerPhone" placeholder="(952) 255-1111" />
+                                    </div>
+                                    <input class="detailstep__submit" type="submit" value="ADD" />
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="detailstep__from_item">
+                        <div class="detailstep__item pilot__options">                            
+                            <label class="pilot__option" for="choose__closer3">
+                                <input type="radio" name="choose__closer2" id="choose__closer3" value="0">
+                                <span>CHOOSE YOUR BROKER</span>
+                                <select class="detailstep__select" name="detailstep__select2" id="detailstep__select2">
+                                    <option value="value1">Broker</option>
+                                    <option value="value2">Broker1</option>
+                                    <option value="value3">Broker2</option>
+                                </select>
+                            </label>
+
+                        </div>
+                        <div class="detailstep__item pilot__options">                            
+                            <label class="pilot__option" for="choose__closer4">
+                                <input type="radio" name="choose__closer2" id="choose__closer4">
+                                <span>OR, ADD YOUR OWN</span>
+                                <div class="detailstep__show">
+                                    <div class="row pilot__info individual">
+                                        <label for="brokerName">Broker Name</label>
+                                        <input type="text" name="brokerName" id="brokerName" placeholder="Jane Smith" />
+                                    </div>
+                                    <div class="row pilot__info individual">
+                                        <label for="companyName">Company Name</label>
+                                        <input type="text" name="companyName" id="companyName" placeholder="Example Title" />
+                                    </div>
+                                    <div class="row pilot__info individual">
+                                        <label for="brokerEmail">Broker Email</label>
+                                        <input type="text" name="brokerEmail" id="brokerEmail" placeholder="jane@exampletitle.com" />
+                                    </div>
+                                    <div class="row pilot__info individual">
+                                        <label for="brokerPhone">Broker Phone</label>
+                                        <input type="text" name="brokerPhone" id="brokerPhone" placeholder="(952) 255-1111" />
+                                    </div>
+                                    <input class="detailstep__submit" type="submit" value="ADD" />
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <input class="detailstep__from_submit" type="submit" value="save & continue">
+                </form>
+            </section>
+        </article>
+    </main>
+</body>
+<script>
+    document.querySelector('main').addEventListener('click', () => {
+        let count = document.querySelectorAll('input[value="0"]:checked').length;
+        if(count == 2) {
+            document.querySelector('.detailstep__from_submit').style.display = 'flex';
+        }
+    });
+</script>
+</html>

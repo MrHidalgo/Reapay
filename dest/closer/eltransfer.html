@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@stripe">
+    <meta name="twitter:title" content="reapay.io">
+    <meta name="twitter:description" content="reapay.io is an on-demand platform built on top of Stripe Connect Custom.">
+    <meta name="twitter:image" content="">
+    <title>Fund Disbursement Authorization</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" sizes="64x64" href="/img/favicon.svg">
+</head>
+<body>
+    <header>
+        <article class="toolbar">
+                <img class="toolbar__img" src="img/image2vector.svg" alt="reapay.io">
+                <div class="toolbar__btn">
+                    <span>dashboard</span>
+                    <button>log out</button>
+                </div>
+        </article>
+    </header>
+    <main>
+        <article class="authorization">
+            <h1>Fund Disbursement Authorization</h1>
+            <section class="authorization__top">
+                <div class="autorization__mls authorization__item">
+                    <label for="mls">MLS#</label>
+                    <input type="text" name="mls" id="mls" value="502034565">
+                </div>
+                <div class="autorization__propaddress  authorization__item">
+                    <label for="propaddress">Property Address</label>
+                    <input type="text" name="propaddress" id="propaddress" value="43565 Copperstone Street…">
+                </div>
+                <div class="autorization__closingdate  authorization__item">
+                    <label for="closingdate">Closing Date</label>
+                    <input type="date" name="closingdate" id="closingdate">
+                </div>
+                <div class="autorization__finalprice  authorization__item">
+                    <label for="finalprice">Final Price</label>
+                    <input type="text" name="finalprice" id="finalprice" value="$326,500">
+                </div>
+                <div class="autorization__commision  authorization__item">
+                    <span>Commision to:</span>
+                    <label for="commision">Corey Hennagir</label>
+                    <input type="text" name="commision" id="commision" value="$4,407.75">
+                </div>
+                <div class="authorization__submit">
+                    <input type="submit" value="Continue">
+                </div>
+            </section>
+            <section class="authorization__bottom">
+                <h4>Bridge Realty, LLC has requested a paper check.</h4>
+                <div class="authorization__bottom_item">
+                    <span>Commision to:</span>
+                    <label for="bottom_commision">Bridge Realty LLC</label>
+                    <input type="text" name="bottom_commision" id="bottom_commision"  value="$4,407.75">
+                </div>
+                <div class="authorization__bottom_item">
+                    <span>Admin Fee to:</span>
+                    <label for="bottom_admin">Bridge Realty LLC</label>
+                    <input type="text" name="bottom_admin" id="bottom_admin"  value="$495">
+                </div>
+                <div class="authorization__bottom_item">
+                    <input type="text" name="bottom_address" id="bottom_address"  value="1101 E 78th Street, Suite 300, Bloomington, MN 55420">
+                </div>
+            </section>
+        </article>
+    </main>
+</body>

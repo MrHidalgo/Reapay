@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@stripe">
+    <meta name="twitter:title" content="reapay.io">
+    <meta name="twitter:description" content="reapay.io is an on-demand platform built on top of Stripe Connect Custom.">
+    <meta name="twitter:image" content="">
+    <title>Fund Disbursement Authorization</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" sizes="64x64" href="/img/favicon.svg">
+</head>
+<body>
+    <header>
+        <article class="toolbar">
+                <img class="toolbar__img" src="img/image2vector.svg" alt="reapay.io">
+                <div class="toolbar__btn">
+                    <span>dashboard</span>
+                    <button>log out</button>
+                </div>
+        </article>
+    </header>
+    <main>
+        <div class="step">step 1/2</div>
+        <article class="authorization">
+            <h1>Commission Disbursement Authorization</h1>
+            <p>
+                As the Broker of Bridge Realty, LLC, Corey Hennagir has requested your approval for the following commission disbursement. You can edit comp details up and add notes based on your Agent Agreement at anytime prior to close of escrow.
+            </p>
+            <section class="authorization__top">
+                <div class="autorization__mls authorization__item">
+                    <label for="mls">MLS#</label>
+                    <input type="text" name="mls" id="mls" value="502034565">
+                </div>
+                <div class="autorization__propaddress  authorization__item">
+                    <label for="propaddress">Property Address</label>
+                    <input type="text" name="propaddress" id="propaddress" value="43565 Copperstone Street…">
+                </div>
+                <div class="autorization__closingdate  authorization__item">
+                    <label for="closingdate">Closing Date</label>
+                    <input type="date" name="closingdate" id="closingdate">
+                </div>
+                <div class="autorization__finalprice  authorization__item">
+                    <label for="finalprice">Final Price</label>
+                    <input type="text" name="finalprice" id="finalprice" value="$326,500">
+                </div>
+                <div class="pilot__options authorization">
+                    <h4 class="pilot__header">Corey Is Representing</h4>
+                    <label class="pilot__option authorization">
+                        <input type="radio" name="pilot-type" value="individual" id="po-company" checked="checked"/>
+                        <span>Buyer</span>
+                    </label>
+                    <label class="pilot__option authorization">
+                        <input type="radio" name="pilot-type" value="individual" id="po-individual"/>
+                        <span>Seller</span>
+                    </label>
+                    <label class="pilot__option authorization">
+                        <input type="radio" name="pilot-type" value="individual" id="po-realtor" />
+                        <span>Dual</span>
+                    </label>
+                </div>
+                <div>
+                    <div class="autorization__total authorization__item authorization__item_percent">
+                        <label for="total">Total Comp</label>
+                        <input type="text" name="total" id="total" value="$8,815.50">
+                        <span>2.7%</span>
+                    </div>
+                    <div class="autorization__coreyscomp  authorization__item authorization__item_percent">
+                        <label for="coreyscomp">Corey’s Comp</label>
+                        <input type="text" name="coreyscomp" id="coreyscomp" value="$4,407.75">
+                        <span>50%</span>
+                    </div>
+                    <div class="autorization__bridgecomp  authorization__item authorization__item_percent">
+                        <label for="bridgecomp">Bridge Comp</label>
+                        <input type="text" name="bridgecomp" id="bridgecomp" value="$4,407.75">
+                        <span>50%</span>
+                    </div>
+                    <div class="autorization__bridgefee  authorization__item authorization__item_percent">
+                        <label for="bridgefee">Bridge Admin Fee</label>
+                        <input type="text" name="bridgefee" id="bridgefee" value="$495">
+                    </div>
+                </div>
+                <div class="authorization__add">Add Line Item +</div>
+                <div class="authorization__info">
+                    <a href="#">Agent Notes</a>
+                    <span>Paying 50% of total comp toward FB Ad spend.</span>
+                </div>
+            </section>
+            <section class="authorization__bottom">
+                <div class="authorization__last">
+                    <input type="checkbox" name="authorization_check" id="authorization_check"
+                    onclick="document.querySelector('.authorization__submit').classList.toggle('authorization__hidden');">
+                    <label for="authorization_check">As Broker or authorized authority of Bridge Realty, LLC I authorize MLG Title to disburse commissions payable to Project52 Media, LLC (Corey Hennagir) in the amount of four thousand four hundred seven dollars and seventy five cents ($4,407.75) immediately following close of escrow of the aforementioned transaction.</label>
+                </div>
+                <div class="authorization__submit">
+                    <input type="submit" value="Continue">
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
