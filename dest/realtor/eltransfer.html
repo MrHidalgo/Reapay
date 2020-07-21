@@ -18,7 +18,9 @@
     <article class="toolbar">
         <img class="toolbar__img" src="img/image2vector.svg" alt="reapay.io">
         <div class="toolbar__btn">
-            <span>dashboard</span>
+            <span>
+                <button onclick="window.location.href = '/dashboard.html'; return false;">dashboard</button>
+            </span>
             <button>log out</button>
         </div>
     </article>
@@ -84,7 +86,7 @@
         </section>
         <section class="authorization__bottom">
             <div class="authorization__submit">
-                <input type="submit" value="SAVE & CONTINUE">
+                <input type="submit" value="SAVE & CONTINUE" onclick="window.location.href = '/funds.html'; return false;">
             </div>
             <div class="authorization__last">
                 You can edit the transaction details from the dashboard at anytime prior to close of escrow.

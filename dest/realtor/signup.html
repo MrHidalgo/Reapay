@@ -24,12 +24,12 @@
         <article class="toolbar">
                 <img class="toolbar__img" src="img/image2vector.svg" alt="reapay.io">
                 <div class="toolbar__btn">
-                    <button>LOG IN</button>
+                    <button onclick="window.location.href = '/login.html'; return false;">LOG IN</button>
                 </div>
         </article>
     </header>
     <main>
-        <form class="form pilot" action="#">
+        <form class="form pilot" action="#" method="" autocomplete="off">
             <h1>Complete your Realtor profile</h1>
             <div class="pilot__wrapper">
 
@@ -69,7 +69,7 @@
                         <input type="text" name="closerPhone" id="closerPhone" placeholder="(952) 255-1111" />
                     </div>
                 </div>
-                <input class="pilot__submit" type="submit" value="Continue" />
+                <input class="pilot__submit" type="submit" value="Continue" onclick="window.location.href = '/details.html'; return false;"/>
 
             </div>
         </form>

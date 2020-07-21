@@ -1160,7 +1160,7 @@ main {
 .detailstep__from_submit {
     width: 323px;
     height: 27px;
-    display: none;
+    /*display: none;*/
     justify-content: center;
     align-items: center;
     font-family: 'Barlow', sans-serif;
